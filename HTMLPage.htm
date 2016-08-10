@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script data-main="Js/init" src="Js/utils/requirejs-min.js"></script>
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div id="game-container" class="center-block">
+            <div class="heading">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>
+                            Игра 2048</h1>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h3 class="glyphicon glyphicon-star" aria-hidden="true" title="Счет">
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 text-left">
+                        <button type="button" id="btnTryAgain" class="btn btn-warning">
+                            <b>Новая игра</b></button>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div id="scorediv">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="game-message" class="text-center">
+                <div id="gameRules" class="alert alert-info fade in" style="display: none;">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Правила игры:</strong>
+                    <br />
+                    Передвигайте цифровые блоки с помощью кпонок &#8592 &#8593 &#8594 &#8595.<br />
+                    Совмещайте соседние блоки с одинаковым номиналом.<br />
+                    <strong>Условие победы:</strong> Получить блок с номиналом <strong>2048</strong>.
+                </div>
+                <div id="winMessage" class="alert alert-success fade in" style="display: none;">
+                    <button type="button" class="close winMsg" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Победа!</strong>
+                    <br />
+                    Для начала новой игры нажмите кнопку "Новая игра" или продолжите текущую.
+                </div>
+                <div id="loseMessage" class="alert alert-danger alert-dismissible fade in" style="display: none;">
+                    <button type="button" class="close loseMsg" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Нет доступных ходов!</strong><br />
+                    Попробуйте снова.
+                </div>
+            </div>
+            <div id="game-block" class="text-center well">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
