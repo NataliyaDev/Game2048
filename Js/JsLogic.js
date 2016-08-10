@@ -7,6 +7,7 @@ define(["./models/MoveTypeEnum", "./models/CellModel"], function (MoveTypeEnum, 
         var size = 4;
         var score = 0;
         var matrix = [];
+        var winScore = 2048;
 
         var MoveVecEnum = Object.freeze({
             Up: [0, 0, -1],
@@ -123,7 +124,7 @@ define(["./models/MoveTypeEnum", "./models/CellModel"], function (MoveTypeEnum, 
                         matrix[nextI][nextJ].merged = true;
                         cellMoved = true;
 
-                        if (!isWin && value == 2048)
+                        if (!isWin && value == winScore)
                             isWin = true;
 
                         break;
